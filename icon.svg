@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Morrow">
+  <rect width="512" height="512" rx="116" fill="#1b1d18"/>
+  <path d="M128 360V196c0-22 27-33 42-16l86 94 86-94c15-17 42-6 42 16v164h-54V274l-74 82-74-82v86z" fill="#dcf56f"/>
+  <circle cx="396" cy="132" r="26" fill="#dcf56f" opacity="0.82"/>
+</svg>

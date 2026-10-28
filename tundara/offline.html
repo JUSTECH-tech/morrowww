@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You're offline · Tundara</title>
+  <meta name="theme-color" content="#0b7a5a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 15% 10%, #e8f7f1, #fff 45%, #f5f8f7); color: #0b1f19; }
+    .card { width: 100%; max-width: 470px; text-align: center; background: #fff; border: 1px solid #e3ebe8;
+      border-radius: 22px; padding: 40px 30px; box-shadow: 0 20px 60px -30px rgba(6, 74, 57, .35); }
+    .mark { width: 64px; height: 64px; border-radius: 18px; margin: 0 auto 20px; display: grid; place-items: center;
+      background: linear-gradient(135deg, #0e8f69, #075f47); box-shadow: 0 10px 24px -10px rgba(11, 122, 90, .6); }
+    .mark svg { width: 34px; height: 34px; }
+    .wifi { width: 76px; height: 76px; border-radius: 50%; margin: 0 auto 18px; display: grid; place-items: center;
+      background: #f2f7f5; color: #0b7a5a; }
+    .wifi svg { width: 34px; height: 34px; }
+    h1 { font-size: 1.45rem; margin: 0 0 8px; letter-spacing: -.02em; }
+    p { color: #64766f; font-size: .88rem; line-height: 1.65; margin: 0 auto 22px; max-width: 34ch; }
+    .actions { display: flex; gap: 9px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 42px;
+      padding: 10px 18px; border-radius: 10px; border: 1px solid transparent; font: inherit; font-size: .82rem;
+      font-weight: 700; text-decoration: none; cursor: pointer; transition: .18s; }
+    .btn-primary { background: #0b7a5a; color: #fff; }
+    .btn-primary:hover { background: #075f47; }
+    .btn-outline { border-color: #dce7e3; color: #0b1f19; background: #fff; }
+    .btn-outline:hover { border-color: #0b7a5a; color: #0b7a5a; }
+    .hint { margin-top: 20px; font-size: .72rem; color: #93a29d; }
+    .status { display: inline-flex; align-items: center; gap: 6px; font-size: .7rem; font-weight: 700;
+      color: #a15c00; background: #fff6e6; border-radius: 99px; padding: 5px 10px; margin-bottom: 16px; }
+    .status i { width: 6px; height: 6px; border-radius: 50%; background: #ee9b00; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none"><path d="M19 20h26L25 44h20" stroke="#fff" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="47.5" cy="17.5" r="4" fill="#ff8a3d"/></svg>
+    </div>
+    <span class="status"><i></i> No internet connection</span>
+    <div class="wifi" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 8.8a16 16 0 0 1 20 0M5.5 12.5a11 11 0 0 1 13 0M9 16.2a6 6 0 0 1 6 0"/><path d="M12 20h.01"/><path d="m3 3 18 18"/>
+      </svg>
+    </div>
+    <h1>You're offline right now</h1>
+    <p>Your basket and wishlist are safely saved on this device. Reconnect to keep shopping — or try again if your signal just came back.</p>
+    <div class="actions">
+      <button class="btn btn-primary" type="button" onclick="location.reload()">Try again</button>
+      <a class="btn btn-outline" href="index.html">Go to homepage</a>
+    </div>
+    <p class="hint">Tundara keeps working offline for pages you've already visited.</p>
+  </main>
+</body>
+</html>

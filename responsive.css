@@ -1,0 +1,1129 @@
+/* =========================================================
+   Responsive refinements
+   ========================================================= */
+
+@media (max-width: 1280px) {
+  :root {
+    --sidebar-w: 244px;
+  }
+
+  .dashboard-layout {
+    grid-template-columns: minmax(0, 1.55fr) minmax(288px, 0.78fr);
+  }
+
+  .insights-grid {
+    grid-template-columns: minmax(0, 1.36fr) minmax(280px, 0.72fr);
+  }
+}
+
+@media (max-width: 1190px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .dashboard-side .quote-card {
+    grid-column: 1 / -1;
+  }
+
+  .timer-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timer-center {
+    justify-content: flex-start;
+  }
+
+  .timer-card .timer-subject,
+  .timer-card .timer-presets,
+  .timer-card .timer-action,
+  .timer-card .timer-hint {
+    max-width: none;
+  }
+
+  .habit-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1120px) {
+  .focus-layout,
+  .planner-layout,
+  .insights-grid,
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-side,
+  .planner-side,
+  .insight-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .focus-side .sessions-card,
+  .planner-side .planning-note,
+  .insight-side .reflection-card {
+    grid-column: 1 / -1;
+  }
+
+  .focus-room {
+    min-height: 590px;
+  }
+
+  .settings-layout .settings-column:last-child {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .page-intro {
+    padding-top: 18px;
+  }
+
+  .habit-list {
+    grid-template-columns: 1fr;
+  }
+
+  .new-habit-card {
+    min-height: 120px;
+  }
+
+  .onboarding-screen {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .onboarding-art {
+    min-height: auto;
+    padding: 28px 32px 38px;
+  }
+
+  .onboarding-art-main {
+    padding: 34px 0 6px;
+  }
+
+  .onboarding-art-copy h1 {
+    max-width: 650px;
+    font-size: clamp(42px, 7vw, 60px);
+  }
+
+  .onboarding-preview {
+    display: none;
+  }
+
+  .onboarding-art-foot {
+    display: none;
+  }
+
+  .onboarding-form-panel {
+    min-height: auto;
+    padding: 34px 32px 54px;
+    overflow: visible;
+  }
+
+  .onboarding-form-inner {
+    max-width: 540px;
+  }
+
+  .onboarding-progress {
+    margin-bottom: 30px;
+  }
+
+  .onboarding-footer {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 960px) {
+  :root {
+    --topbar-h: 72px;
+  }
+
+  .app-shell {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .main-content {
+    padding-bottom: 104px;
+  }
+
+  .brand-mobile {
+    display: inline-flex;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .brand-mobile .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+  }
+
+  .brand-mobile .brand-mark svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .brand-mobile .brand-word {
+    font-size: 20px;
+  }
+
+  .avatar-top {
+    display: inline-grid;
+  }
+
+  .topbar-date {
+    display: none;
+  }
+
+  .topbar {
+    padding: 10px clamp(18px, 4vw, 34px);
+    border-bottom-color: var(--line);
+  }
+
+  .page-intro {
+    padding: 20px 0 25px;
+  }
+
+  .page-title {
+    font-size: clamp(42px, 6vw, 56px);
+  }
+
+  .toast-stack {
+    bottom: 84px;
+  }
+}
+
+@media (max-width: 820px) {
+  .dashboard-side {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-side .quote-card {
+    grid-column: auto;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr 128px;
+    gap: 15px;
+  }
+
+  .hero-ring {
+    width: 118px;
+    height: 118px;
+  }
+
+  .hero-ring-value {
+    font-size: 30px;
+  }
+
+  .overview-stat {
+    min-height: 104px;
+    padding: 15px;
+  }
+
+  .overview-stat-value {
+    margin-top: 11px;
+    font-size: 31px;
+  }
+
+  .insights-overview {
+    gap: 8px;
+  }
+
+  .topbar .command-trigger {
+    width: 38px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .command-trigger-label,
+  .command-trigger kbd {
+    display: none;
+  }
+
+  .focus-side,
+  .planner-side,
+  .insight-side {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-side .sessions-card,
+  .planner-side .planning-note,
+  .insight-side .reflection-card {
+    grid-column: auto;
+  }
+
+  .settings-layout .settings-column:last-child {
+    grid-row: auto;
+  }
+
+  .page-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .page-actions {
+    width: 100%;
+  }
+
+  .page-actions .btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-content {
+    padding-right: 19px;
+    padding-left: 19px;
+    padding-bottom: 100px;
+  }
+
+  .topbar {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+
+  .new-btn {
+    width: 38px;
+    padding: 0;
+  }
+
+  .new-btn-label {
+    display: none;
+  }
+
+  .topbar-actions {
+    gap: 7px;
+  }
+
+  .page-title {
+    font-size: 44px;
+  }
+
+  .page-subtitle {
+    max-width: 100%;
+    font-size: 11.5px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .hero-card {
+    padding: 24px;
+    border-radius: 25px;
+  }
+
+  .hero-inner {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(36px, 9vw, 49px);
+  }
+
+  .hero-progress {
+    flex-direction: row;
+    gap: 11px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .hero-ring {
+    width: 68px;
+    height: 68px;
+    flex: 0 0 auto;
+  }
+
+  .hero-ring svg {
+    transform: rotate(-90deg);
+  }
+
+  .hero-ring-value {
+    font-size: 19px;
+  }
+
+  .hero-ring-label {
+    font-size: 5.7px;
+  }
+
+  .hero-progress-copy {
+    text-align: left;
+  }
+
+  .hero-streak {
+    margin-bottom: 13px;
+  }
+
+  .hero-stats {
+    margin-top: 16px;
+  }
+
+  .hero-actions {
+    margin-top: 19px;
+  }
+
+  .hero-actions .btn {
+    flex: 1;
+  }
+
+  .week-card {
+    padding: 17px;
+  }
+
+  .week-grid {
+    gap: 4px;
+  }
+
+  .week-day {
+    min-height: 104px;
+    padding: 7px 3px;
+    border-radius: 10px;
+  }
+
+  .week-day-name {
+    font-size: 7px;
+  }
+
+  .week-day-num {
+    font-size: 9px;
+  }
+
+  .week-day-score {
+    font-size: 7px;
+  }
+
+  .week-day-track {
+    width: 6px;
+  }
+
+  .habit-row {
+    gap: 10px;
+  }
+
+  .habit-toggle {
+    width: 31px;
+    height: 31px;
+  }
+
+  .habit-stats {
+    gap: 8px;
+  }
+
+  .stat-tile {
+    min-height: 84px;
+    padding: 13px;
+    gap: 10px;
+  }
+
+  .stat-tile-icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 9px;
+  }
+
+  .stat-tile-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .stat-tile-label {
+    font-size: 8px;
+  }
+
+  .stat-tile-value {
+    font-size: 25px;
+  }
+
+  .habit-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .habit-toolbar .filter-row {
+    width: 100%;
+  }
+
+  .habit-toolbar .btn {
+    width: 100%;
+  }
+
+  .habit-card {
+    padding: 16px;
+  }
+
+  .habit-card-edit {
+    opacity: 1;
+  }
+
+  .habit-card-top {
+    gap: 9px;
+  }
+
+  .habit-day-mark {
+    max-width: 30px;
+  }
+
+  .focus-room {
+    min-height: 550px;
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  .focus-ring-wrap {
+    width: min(268px, 69vw);
+  }
+
+  .focus-room-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .focus-live-label {
+    order: -1;
+  }
+
+  .focus-presets {
+    gap: 5px;
+  }
+
+  .focus-preset {
+    min-width: 55px;
+  }
+
+  .focus-main {
+    padding: 24px 0 18px;
+    gap: 15px;
+  }
+
+  .focus-controls {
+    margin-top: 16px;
+  }
+
+  .focus-controls .btn-primary-focus {
+    min-width: 155px;
+  }
+
+  .focus-goal-value {
+    font-size: 40px;
+  }
+
+  .focus-week-card,
+  .sessions-card {
+    padding: 17px;
+  }
+
+  .planner-card {
+    padding: 17px;
+  }
+
+  .task-item {
+    padding-left: 11px;
+  }
+
+  .task-item-edit {
+    opacity: 1;
+  }
+
+  .task-composer .btn {
+    padding: 0 11px;
+  }
+
+  .task-composer .btn span {
+    display: none;
+  }
+
+  .insights-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bar-chart {
+    gap: 7px;
+  }
+
+  .bar-column {
+    width: min(30px, 66%);
+  }
+
+  .heatmap-grid {
+    grid-auto-columns: 11px;
+    grid-template-rows: repeat(7, 11px);
+    gap: 3px;
+  }
+
+  .heat-cell {
+    width: 11px;
+    height: 11px;
+  }
+
+  .heatmap-days {
+    grid-template-rows: repeat(7, 11px);
+    gap: 3px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .modal {
+    width: 100%;
+    max-width: none;
+    margin: auto 0 0;
+  }
+
+  .modal-panel,
+  .modal.modal-wide,
+  .modal.modal-narrow {
+    max-width: none;
+    max-height: 91dvh;
+    padding: 22px 19px calc(22px + env(safe-area-inset-bottom));
+    border-radius: 25px 25px 0 0;
+    border-bottom: 0;
+  }
+
+  .modal[open] .modal-panel {
+    animation: sheetIn 0.3s var(--ease) both;
+  }
+
+  .modal-head {
+    margin-bottom: 20px;
+  }
+
+  .modal-title {
+    font-size: 30px;
+  }
+
+  .toast-stack {
+    right: 16px;
+    left: 16px;
+    bottom: 82px;
+    width: auto;
+  }
+
+  .onboarding-art {
+    padding: 24px 22px 30px;
+  }
+
+  .onboarding-art-main {
+    padding: 27px 0 2px;
+  }
+
+  .onboarding-art-copy h1 {
+    font-size: 42px;
+  }
+
+  .onboarding-art-copy p {
+    display: none;
+  }
+
+  .onboarding-form-panel {
+    padding: 27px 21px 48px;
+  }
+
+  .onboarding-footer {
+    position: sticky;
+    bottom: -48px;
+    z-index: 3;
+    margin-right: -21px;
+    margin-left: -21px;
+    padding: 14px 21px calc(14px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg) 93%, transparent);
+    backdrop-filter: blur(16px);
+  }
+
+  .onboarding-footer .btn {
+    min-width: 105px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-title {
+    font-size: 40px;
+  }
+
+  .page-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-actions .btn {
+    min-width: 0;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-copy-text {
+    font-size: 10.5px;
+  }
+
+  .hero-stat {
+    height: 27px;
+    padding: 0 8px;
+    font-size: 9px;
+  }
+
+  .hero-actions .btn {
+    font-size: 10.5px;
+  }
+
+  .card-head {
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .habit-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-tile {
+    min-height: 73px;
+  }
+
+  .stat-tile::after {
+    display: none;
+  }
+
+  .stat-tile-copy {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .stat-tile-label {
+    order: 2;
+  }
+
+  .stat-tile-value {
+    font-size: 27px;
+  }
+
+  .habit-toolbar .filter-pill {
+    flex: 1;
+    padding: 0 8px;
+    font-size: 9px;
+  }
+
+  .habit-card-meta {
+    gap: 4px;
+  }
+
+  .habit-day {
+    padding: 4px 0 2px;
+  }
+
+  .habit-day-label {
+    font-size: 7px;
+  }
+
+  .habit-day-mark {
+    max-width: 27px;
+  }
+
+  .focus-time {
+    font-size: 56px;
+  }
+
+  .focus-ring-wrap {
+    width: min(238px, 69vw);
+  }
+
+  .focus-preset {
+    min-width: 50px;
+    min-height: 31px;
+    font-size: 8.5px;
+  }
+
+  .focus-controls .btn-primary-focus {
+    min-width: 145px;
+  }
+
+  .focus-stat-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .focus-goal-value {
+    font-size: 38px;
+  }
+
+  .focus-week-chart {
+    height: 92px;
+  }
+
+  .plan-week-card {
+    padding: 15px;
+  }
+
+  .plan-progress-card {
+    padding: 19px;
+  }
+
+  .insights-overview {
+    gap: 7px;
+  }
+
+  .overview-stat {
+    min-height: 99px;
+    padding: 13px;
+  }
+
+  .overview-stat-label {
+    font-size: 8px;
+  }
+
+  .overview-stat-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .overview-stat-value {
+    font-size: 28px;
+  }
+
+  .overview-stat-foot {
+    font-size: 7.5px;
+  }
+
+  .chart-summary strong {
+    font-size: 30px;
+  }
+
+  .bar-chart {
+    height: 154px;
+    gap: 5px;
+  }
+
+  .bar-label {
+    font-size: 7px;
+  }
+
+  .heatmap-wrap {
+    gap: 5px;
+  }
+
+  .heatmap-months {
+    margin-left: 19px;
+  }
+
+  .donut-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .donut-legend {
+    width: 100%;
+  }
+
+  .donut {
+    width: 100px;
+    height: 100px;
+  }
+
+  .settings-card {
+    padding: 18px;
+  }
+
+  .theme-options {
+    gap: 6px;
+  }
+
+  .theme-preview {
+    height: 42px;
+  }
+
+  .accent-choice {
+    padding-right: 9px;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-panel {
+    padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+  }
+
+  .form-actions {
+    flex-wrap: wrap;
+  }
+
+  .form-actions .btn {
+    flex: 1;
+  }
+
+  .form-actions .btn-danger {
+    flex-basis: 100%;
+    margin-right: 0;
+    order: 4;
+  }
+
+  .icon-choice {
+    width: 35px;
+    height: 35px;
+  }
+
+  .day-choice {
+    width: 31px;
+    height: 31px;
+  }
+
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .onboarding-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .onboarding-art-copy h1 {
+    font-size: 36px;
+  }
+
+  .onboarding-step h2 {
+    font-size: 35px;
+  }
+
+  .onboarding-fields {
+    margin-top: 24px;
+  }
+
+  .onboarding-goal-value {
+    font-size: 44px;
+  }
+
+  .onboarding-footer {
+    bottom: -48px;
+  }
+
+  .onboarding-topline {
+    margin-bottom: 14px;
+  }
+
+  .page-intro {
+    padding-bottom: 20px;
+  }
+
+  .page-subtitle {
+    margin-top: 8px;
+  }
+
+  .mobile-nav {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .toast-stack {
+    bottom: 77px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-card {
+    padding: 20px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-stats {
+    gap: 5px;
+  }
+
+  .hero-actions {
+    gap: 5px;
+  }
+
+  .hero-actions .btn {
+    padding: 0 10px;
+  }
+
+  .week-day {
+    min-height: 96px;
+  }
+
+  .week-day-num {
+    display: none;
+  }
+
+  .timer-center {
+    gap: 11px;
+  }
+
+  .mini-timer-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timer-mini-time {
+    font-size: 20px;
+  }
+
+  .topbar .theme-btn {
+    display: none;
+  }
+
+  .page-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .habit-day-mark {
+    max-width: 24px;
+    border-radius: 6px;
+  }
+
+  .habit-week {
+    gap: 2px;
+  }
+
+  .task-item {
+    gap: 8px;
+  }
+
+  .task-item-edit {
+    width: 23px;
+  }
+
+  .focus-room {
+    padding: 17px;
+  }
+
+  .focus-time {
+    font-size: 50px;
+  }
+
+  .focus-ring-wrap {
+    width: min(218px, 68vw);
+  }
+
+  .focus-presets {
+    gap: 4px;
+  }
+
+  .focus-preset {
+    min-width: 45px;
+    padding: 0 8px;
+  }
+
+  .focus-controls .btn-primary-focus {
+    min-width: 130px;
+    padding: 0 15px;
+  }
+
+  .focus-reset-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .insights-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-stat {
+    min-height: 84px;
+  }
+
+  .overview-stat-value {
+    margin-top: 6px;
+  }
+
+  .overview-stat-foot {
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+  }
+
+  .onboarding-art {
+    padding: 20px 18px 25px;
+  }
+
+  .onboarding-art-copy h1 {
+    font-size: 32px;
+  }
+
+  .onboarding-art-main {
+    padding-top: 20px;
+  }
+
+  .onboarding-form-panel {
+    padding: 25px 17px 44px;
+  }
+
+  .onboarding-step h2 {
+    font-size: 31px;
+  }
+
+  .onboarding-footer {
+    bottom: -44px;
+    margin-right: -17px;
+    margin-left: -17px;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .onboarding-skip {
+    font-size: 8.5px;
+  }
+}
+
+@keyframes sheetIn {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (hover: none) {
+  .habit-card-edit,
+  .task-item-edit,
+  .session-delete {
+    opacity: 1;
+  }
+
+  .btn:hover,
+  .habit-card:hover {
+    transform: none;
+  }
+}

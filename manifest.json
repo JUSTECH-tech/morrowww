@@ -1,0 +1,30 @@
+{
+  "name": "Morrow — Habits, focus & progress",
+  "short_name": "Morrow",
+  "description": "A calm, local-first habit and focus tracker for anyone building a better rhythm.",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#f4f1e9",
+  "theme_color": "#f4f1e9",
+  "orientation": "any",
+  "categories": ["productivity", "lifestyle", "education"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

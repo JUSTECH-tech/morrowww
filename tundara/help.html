@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help centre · Tundara</title>
+  <meta name="description" content="Answers about delivery, returns, payments, orders and your Tundara account — plus 24/7 support from real humans.">
+  <meta name="theme-color" content="#0b7a5a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="help">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Help centre</span>
+      </nav>
+
+      <section class="help-hero">
+        <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff">Tundara support</span>
+        <h1>How can we help today?</h1>
+        <p>Search hundreds of answers on delivery, returns, payments and more. Still stuck? Our team replies in under 3 minutes, 24/7.</p>
+        <form class="help-search" id="helpSearchForm" role="search" autocomplete="off">
+          <input id="helpSearch" type="search" placeholder="Search help, e.g. “return an item”" aria-label="Search the help centre">
+          <button class="icon-btn help-search-clear" id="helpSearchClear" type="button" aria-label="Clear search" hidden><span data-icon="x"></span></button>
+          <button class="btn btn-primary btn-sm" type="submit"><span data-icon="search"></span> Search</button>
+        </form>
+        <div class="help-hero-tags">
+          <span>Popular:</span>
+          <button type="button" data-search-topic="delivery">Delivery time</button>
+          <button type="button" data-search-topic="refund">Refunds</button>
+          <button type="button" data-search-topic="coupon">Coupons</button>
+          <button type="button" data-search-topic="pay on delivery">Pay on delivery</button>
+        </div>
+      </section>
+
+      <div class="help-links">
+        <a class="help-link-card" href="track.html">
+          <span data-icon="package"></span>
+          <strong>Track an order</strong>
+          <span>See live courier updates and your ETA.</span>
+        </a>
+        <a class="help-link-card" href="#returns" data-help-jump="#returns">
+          <span data-icon="returns"></span>
+          <strong>Returns &amp; refunds</strong>
+          <span>7-day free returns on eligible items.</span>
+        </a>
+        <a class="help-link-card" href="#payments" data-help-jump="#payments">
+          <span data-icon="wallet"></span>
+          <strong>Payments &amp; pricing</strong>
+          <span>Cards, transfers, wallets and Pay on Delivery.</span>
+        </a>
+        <a class="help-link-card" href="#contact" data-help-jump="#contact">
+          <span data-icon="chat"></span>
+          <strong>Talk to a human</strong>
+          <span>Live chat, phone or email — any time.</span>
+        </a>
+      </div>
+
+      <div class="help-layout">
+        <aside class="help-nav" aria-label="Help topics">
+          <h2>Browse topics</h2>
+          <a href="#delivery" data-section="delivery"><span data-icon="truck"></span> Delivery &amp; shipping</a>
+          <a href="#returns" data-section="returns"><span data-icon="returns"></span> Returns &amp; refunds</a>
+          <a href="#payments" data-section="payments"><span data-icon="wallet"></span> Payments &amp; pricing</a>
+          <a href="#orders" data-section="orders"><span data-icon="package"></span> Orders &amp; tracking</a>
+          <a href="#account" data-section="account"><span data-icon="user"></span> Account &amp; security</a>
+          <a href="#contact" data-section="contact"><span data-icon="chat"></span> Contact support</a>
+          <a href="#sell" data-section="sell"><span data-icon="store"></span> Sell on Tundara</a>
+          <a href="#about" data-section="about"><span data-icon="info"></span> About Tundara</a>
+          <a href="#careers" data-section="careers"><span data-icon="sparkles"></span> Careers</a>
+          <a href="#press" data-section="press"><span data-icon="image"></span> Press &amp; media</a>
+          <a href="#affiliates" data-section="affiliates"><span data-icon="share"></span> Affiliates</a>
+          <a href="#terms" data-section="terms"><span data-icon="shield"></span> Terms of service</a>
+          <a href="#privacy" data-section="privacy"><span data-icon="lock"></span> Privacy</a>
+          <a href="#cookies" data-section="cookies"><span data-icon="globe"></span> Cookies</a>
+          <a href="#accessibility" data-section="accessibility"><span data-icon="eye"></span> Accessibility</a>
+        </aside>
+
+        <section class="help-main" id="faqTop" aria-label="Frequently asked questions">
+          <p class="help-search-count" id="helpSearchCount" aria-live="polite" hidden></p>
+
+          <div class="empty-state" id="helpEmpty" hidden>
+            <span class="empty-icon" data-icon="search"></span>
+            <h2>No answers matched that search</h2>
+            <p>Try a shorter phrase like “refund”, “delivery” or “coupon”. Or ask our team directly — we're online now.</p>
+            <div class="empty-actions">
+              <button class="btn btn-primary btn-sm" type="button" data-open-chat><span data-icon="chat"></span> Chat with support</button>
+              <button class="btn btn-outline btn-sm" type="button" id="helpEmptyReset">Clear search</button>
+            </div>
+          </div>
+
+          <div class="faq-group" id="delivery">
+            <h2><span data-icon="truck"></span> Delivery &amp; shipping</h2>
+            <details class="faq-item">
+              <summary>How long does delivery take? <span data-icon="chevron-down"></span></summary>
+              <p>Orders placed before 2pm ship the same day. Inside Lagos, Abuja and Port Harcourt, TundaraExpress delivers in 1–2 business days. Other Nigerian cities take 2–4 days, and remote areas up to 6 days. You'll see a precise estimate on every product page and again at checkout before you pay.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How much does delivery cost? <span data-icon="chevron-down"></span></summary>
+              <p>Standard delivery is free on orders over the free-shipping threshold shown in your basket. Below that, rates start at ₦1,200 and are calculated by weight and destination at checkout. Express and scheduled delivery cost a little extra and are always shown upfront.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I change my delivery address after ordering? <span data-icon="chevron-down"></span></summary>
+              <p>Yes — as long as the order hasn't left our warehouse. Open <a href="account.html#orders">My orders</a>, choose the order and select “Change address”. Once a parcel is with the courier, you can still redirect it from the tracking page in most cities.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do you deliver to pickup stations? <span data-icon="chevron-down"></span></summary>
+              <p>We do. Choose “Pickup station” at checkout and collect from one of 300+ Tundara Points when it suits you. Pickup is free, parcels are held for 7 days, and you'll get a code by SMS and email when your item arrives.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What if nobody is home? <span data-icon="chevron-down"></span></summary>
+              <p>The courier will call before arriving and try twice. After two failed attempts the parcel returns to the nearest hub and stays there for 5 days. You can reschedule from the tracking page at no extra cost, or ask us to leave it with a neighbour or security desk.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="returns">
+            <h2><span data-icon="returns"></span> Returns &amp; refunds</h2>
+            <details class="faq-item">
+              <summary>What is the returns policy? <span data-icon="chevron-down"></span></summary>
+              <p>You have 7 days from delivery to return most items for free, in their original condition and packaging. Fashion, electronics, home and beauty are all covered. Some items — underwear, opened cosmetics, perishable groceries, digital downloads and custom-made pieces — can't be returned for hygiene or licensing reasons.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I start a return? <span data-icon="chevron-down"></span></summary>
+              <p>Go to <a href="account.html#orders">My orders</a>, pick the item and tap “Return or replace”. Choose a reason, print the free label we email you, and hand the parcel to any courier or drop it at a Tundara Point. No printer? We'll send a QR code instead.</p>
+            </details>
+            <details class="faq-item">
+              <summary>When will I get my refund? <span data-icon="chevron-down"></span></summary>
+              <p>We inspect returns within 24 hours of arrival. Approved refunds reach your original payment method in 3–5 business days for cards and instantly for TundaraWallet. Bank transfers can take up to 7 business days depending on your bank. You'll get an email at every step.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I exchange instead of refunding? <span data-icon="chevron-down"></span></summary>
+              <p>Absolutely. Pick “Replace” when you open the return and choose a different size, colour or variant. If the new item costs more, you pay the difference; if it costs less, we refund the balance. Replacements ship as soon as we scan your return.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What if my item arrived damaged or wrong? <span data-icon="chevron-down"></span></summary>
+              <p>Sorry about that — we'll fix it fast. Report it within 48 hours from <a href="account.html#orders">My orders</a> and attach a photo. We arrange free pickup, send a replacement on priority, and cover any return shipping. No need to argue with anyone.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="payments">
+            <h2><span data-icon="wallet"></span> Payments &amp; pricing</h2>
+            <details class="faq-item">
+              <summary>Which payment methods do you accept? <span data-icon="chevron-down"></span></summary>
+              <p>Visa, Mastercard and Verve cards, bank transfer, USSD, TundaraWallet, and Pay on Delivery in most cities. Pay on Delivery is available for orders under ₦150,000 and a small verification fee may apply for first-time customers.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Is it safe to pay on Tundara? <span data-icon="chevron-down"></span></summary>
+              <p>Yes. Payments run on PCI-DSS Level 1 infrastructure with 3-D Secure and tokenised cards — we never see or store your full card number. Every order is also covered by Tundara Guarantee, which holds your money until the item is delivered as described.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do coupons and flash sales work? <span data-icon="chevron-down"></span></summary>
+              <p>Add items to your basket, then enter the code in the coupon box on the basket or checkout page. One code per order, minimum-spend rules apply, and codes can't be combined with each other. Flash-sale prices last while stock lasts and the countdown on the homepage is the exact deadline.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Why did my total change at checkout? <span data-icon="chevron-down"></span></summary>
+              <p>Checkout adds delivery for your address and 7.5% VAT where applicable, both itemised before payment. If a coupon was removed, the code may have expired, hit its usage limit, or fallen below its minimum spend. Your basket subtotal itself never changes silently.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I pay in another currency? <span data-icon="chevron-down"></span></summary>
+              <p>Yes. Use the currency switcher in the header to browse in NGN, USD, GBP, EUR, GHS, KES or ZAR. You're always charged in the currency you select, and the order confirmation locks in that rate — no surprise conversion fees later.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="orders">
+            <h2><span data-icon="package"></span> Orders &amp; tracking</h2>
+            <details class="faq-item">
+              <summary>Where is my order number? <span data-icon="chevron-down"></span></summary>
+              <p>It's in the confirmation email and SMS we send the moment you pay — it always starts with <b>TD-</b>. Signed-in customers can also find every order under <a href="account.html#orders">My orders</a>. Lost the email? Enter the email you ordered with on the <a href="track.html">tracking page</a>.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I track my parcel? <span data-icon="chevron-down"></span></summary>
+              <p>Open <a href="track.html">Track order</a> and paste your order number. You'll see a live timeline from “Order confirmed” to “Delivered”, the courier's name, and a precise ETA. No account or login is needed.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I cancel an order? <span data-icon="chevron-down"></span></summary>
+              <p>Yes, before it ships. Go to <a href="account.html#orders">My orders</a> and choose “Cancel order”. If it's already with the courier, refuse the delivery or start a free return once it arrives — either way you're fully refunded.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I order without an account? <span data-icon="chevron-down"></span></summary>
+              <p>You can browse and build a basket as a guest, but you'll need an account or a quick one-field sign-up to check out. It takes about 20 seconds, keeps your order history in one place, and lets you track and return items without digging through emails.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="account">
+            <h2><span data-icon="user"></span> Account &amp; security</h2>
+            <details class="faq-item">
+              <summary>How do I reset my password? <span data-icon="chevron-down"></span></summary>
+              <p>Choose “Forgot password” on the sign-in screen and we'll email a secure reset link within a minute. The link expires after 30 minutes. If it doesn't arrive, check spam or ask us to resend it from <a href="#contact">support</a>.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I update my details or addresses? <span data-icon="chevron-down"></span></summary>
+              <p>Everything lives in <a href="account.html">your account</a>. Use Profile for your name, phone and email, Addresses to add or set a default delivery address, and Preferences to choose your currency, language and notification style.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How is my data protected? <span data-icon="chevron-down"></span></summary>
+              <p>We use TLS 1.3 in transit, encrypt sensitive fields at rest, and limit staff access to what's needed to serve you. Card details never touch our servers — they're tokenised by our PCI-DSS Level 1 payment partner. You can export or delete your data at any time from Privacy settings.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I delete my account? <span data-icon="chevron-down"></span></summary>
+              <p>Go to <a href="account.html#settings">Settings → Privacy</a> and choose “Delete account”. We'll confirm by email, then erase personal data within 30 days, keeping only records we're legally required to hold (such as invoices). Open orders must be completed or cancelled first.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="contact">
+            <h2><span data-icon="chat"></span> Contact support</h2>
+            <details class="faq-item" open>
+              <summary>How do I reach a human? <span data-icon="chevron-down"></span></summary>
+              <p>Live chat is fastest — tap the green bubble in the corner, or use the button below. You can also call <a href="tel:+2347009876278">+234 700 987 6278</a> (24/7, free from Nigerian networks) or email <a href="mailto:support@tundara.com">support@tundara.com</a>. Average first reply: under 3 minutes.</p>
+            </details>
+            <div class="help-contact-grid">
+              <button class="help-contact-card" type="button" data-open-chat>
+                <span data-icon="chat"></span>
+                <strong>Live chat</strong>
+                <span>Online now · replies in ~2 min</span>
+              </button>
+              <a class="help-contact-card" href="tel:+2347009876278">
+                <span data-icon="phone"></span>
+                <strong>+234 700 987 6278</strong>
+                <span>24/7 · toll-free in Nigeria</span>
+              </a>
+              <a class="help-contact-card" href="mailto:support@tundara.com">
+                <span data-icon="mail"></span>
+                <strong>support@tundara.com</strong>
+                <span>Replies within 2 hours</span>
+              </a>
+              <a class="help-contact-card" href="track.html">
+                <span data-icon="package"></span>
+                <strong>Track an order</strong>
+                <span>Live status, no login needed</span>
+              </a>
+            </div>
+            <details class="faq-item">
+              <summary>Where are your offices? <span data-icon="chevron-down"></span></summary>
+              <p>Our headquarters is at 14 Adeola Odeku Street, Victoria Island, Lagos. We also have fulfilment hubs in Abuja, Port Harcourt and Kano. Visits are by appointment only — message support and we'll arrange one.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="sell">
+            <h2><span data-icon="store"></span> Sell on Tundara</h2>
+            <details class="faq-item">
+              <summary>How do I become a seller? <span data-icon="chevron-down"></span></summary>
+              <p>Apply in about 10 minutes with your business name, CAC number (or ID for individuals), bank account and a few product photos. Most applications are reviewed within 48 hours. There's no listing fee; we take a category-based commission only when you sell.</p>
+            </details>
+            <details class="faq-item">
+              <summary>When do sellers get paid? <span data-icon="chevron-down"></span></summary>
+              <p>Payouts land every Monday for orders delivered and past their return window. You can track every naira in the Seller Centre, download statements, and request an early payout for a small fee once you've completed 20 orders.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="about">
+            <h2><span data-icon="info"></span> About Tundara</h2>
+            <details class="faq-item">
+              <summary>What is Tundara? <span data-icon="chevron-down"></span></summary>
+              <p>Tundara is a Nigerian-born marketplace for everything you love — tech, fashion, home, beauty, groceries and more — with fast delivery, fair prices and buyer protection on every order. The name comes from “tunda” — Swahili for fruit — a nod to harvest, abundance and good things arriving fresh. That's how shopping should feel.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Where do you operate? <span data-icon="chevron-down"></span></summary>
+              <p>We deliver across all 36 states and the FCT, with same-day service in Lagos, Abuja and Port Harcourt. We also ship to Ghana, Kenya and South Africa from our regional hubs, with local currencies and returns.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="careers">
+            <h2><span data-icon="sparkles"></span> Careers</h2>
+            <details class="faq-item">
+              <summary>Are you hiring? <span data-icon="chevron-down"></span></summary>
+              <p>Always looking for people who care about customers. Open roles span engineering, logistics, category management, design and support — most are hybrid in Lagos or fully remote across Africa. Send a CV and a short note about something you've built to <a href="mailto:careers@tundara.com">careers@tundara.com</a>.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="press">
+            <h2><span data-icon="image"></span> Press &amp; media</h2>
+            <details class="faq-item">
+              <summary>How do I request a press kit or interview? <span data-icon="chevron-down"></span></summary>
+              <p>Email <a href="mailto:press@tundara.com">press@tundara.com</a> with your outlet, deadline and angle. We reply within one business day and can provide logos, founder bios, product imagery and data on African e-commerce trends.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="affiliates">
+            <h2><span data-icon="share"></span> Affiliate programme</h2>
+            <details class="faq-item">
+              <summary>How much can affiliates earn? <span data-icon="chevron-down"></span></summary>
+              <p>Up to 8% of every completed order, paid monthly with a 30-day cookie. Creators, publishers and communities are welcome. Apply with your channel links; approvals usually take 2 business days and there's no minimum audience.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="terms">
+            <h2><span data-icon="shield"></span> Terms of service</h2>
+            <details class="faq-item">
+              <summary>What am I agreeing to when I order? <span data-icon="chevron-down"></span></summary>
+              <p>That you're 18 or older, the delivery details you give are accurate, and you'll pay the total shown at checkout. Items are sold by Tundara or independent sellers; Tundara Guarantee and our returns policy apply on top. The short version: shop fairly, and we'll look after you.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can prices or availability change? <span data-icon="chevron-down"></span></summary>
+              <p>Yes — prices, promotions and stock can change until you place an order. Once your order is confirmed, the price you paid is locked. If an item turns out to be unavailable, we'll offer a replacement or a full refund within 24 hours.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="privacy">
+            <h2><span data-icon="lock"></span> Privacy</h2>
+            <details class="faq-item">
+              <summary>What data do you collect and why? <span data-icon="chevron-down"></span></summary>
+              <p>Only what's needed to sell and deliver: your contact and address details, order history, device information and — with consent — analytics and marketing preferences. We never sell personal data. You can opt out of marketing in one tap from any email or in account settings.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="cookies">
+            <h2><span data-icon="globe"></span> Cookies</h2>
+            <details class="faq-item">
+              <summary>How do you use cookies? <span data-icon="chevron-down"></span></summary>
+              <p>Essential cookies keep your basket, login and currency working. Optional cookies help us understand what's popular and show relevant offers. You can accept or reject optional cookies on your first visit, and change your choice any time from the cookie link in the footer.</p>
+            </details>
+          </div>
+
+          <div class="faq-group" id="accessibility">
+            <h2><span data-icon="eye"></span> Accessibility</h2>
+            <details class="faq-item">
+              <summary>Is Tundara accessible with a screen reader? <span data-icon="chevron-down"></span></summary>
+              <p>We aim for WCAG 2.2 AA: semantic landmarks, visible focus states, keyboard-operable menus, alt text on product imagery and reduced-motion support. If something blocks you, email <a href="mailto:access@tundara.com">access@tundara.com</a> and our team will fix it — and help you complete your order in the meantime.</p>
+            </details>
+          </div>
+
+          <div class="help-footer-note">
+            <span data-icon="shield"></span>
+            <div>
+              <strong>Still need help?</strong>
+              <p>We're a real team in Lagos, not a bot. Chat, call or email any time — weekends and holidays included.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" type="button" data-open-chat><span data-icon="chat"></span> Start chat</button>
+          </div>
+        </section>
+
+        <aside class="help-side" aria-label="Support shortcuts">
+          <div class="help-side-card">
+            <h3>Talk to us</h3>
+            <p>Average first reply: under 3 minutes. Humans, 24 hours a day.</p>
+            <button class="btn btn-primary btn-sm" type="button" data-open-chat><span data-icon="chat"></span> Start live chat</button>
+            <div class="help-contact-list" style="margin-top:12px">
+              <a href="tel:+2347009876278"><span data-icon="phone"></span> +234 700 987 6278</a>
+              <a href="mailto:support@tundara.com"><span data-icon="mail"></span> support@tundara.com</a>
+              <a href="track.html"><span data-icon="package"></span> Track an order</a>
+            </div>
+          </div>
+
+          <div class="help-side-card">
+            <h3>Popular answers</h3>
+            <p>Shortcuts to the questions we hear most.</p>
+            <div class="help-topic-pills">
+              <button type="button" data-search-topic="delivery">Delivery time</button>
+              <button type="button" data-search-topic="return">Returns</button>
+              <button type="button" data-search-topic="refund">Refunds</button>
+              <button type="button" data-search-topic="coupon">Coupons</button>
+              <button type="button" data-search-topic="cancel">Cancel order</button>
+              <button type="button" data-search-topic="password">Password</button>
+            </div>
+          </div>
+
+          <div class="help-side-card help-side-brand">
+            <span class="help-side-mark">Z</span>
+            <h3>Tundara Guarantee</h3>
+            <p>Every order is covered — money back if it doesn't arrive or isn't as described.</p>
+            <a class="link-arrow" href="index.html#trust">How it works <span data-icon="arrow-right"></span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/help.js"></script>
+</body>
+</html>

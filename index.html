@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-accent="lime">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Morrow — Habits, focus & progress</title>
+  <meta name="description" content="Morrow is a calm, local-first habit and focus tracker for anyone building a better rhythm.">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231a1c18'/%3E%3Cpath d='M17 43V25h7l8 10 8-10h7v18h-7V35l-8 10-8-10v8z' fill='%23e0f67a'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231a1c18'/%3E%3Cpath d='M17 43V25h7l8 10 8-10h7v18h-7V35l-8 10-8-10v8z' fill='%23e0f67a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="focus-planner.css">
+  <link rel="stylesheet" href="insights-settings.css">
+  <link rel="stylesheet" href="onboarding.css">
+  <link rel="stylesheet" href="responsive.css">
+  <script>
+    // Apply the saved appearance before paint to avoid a flash of the wrong theme.
+    (function () {
+      try {
+        var raw = localStorage.getItem('morrow.v1');
+        var saved = raw ? JSON.parse(raw) : null;
+        var profile = saved && saved.profile ? saved.profile : {};
+        var theme = profile.theme || 'system';
+        var accent = profile.accent || 'lime';
+        var resolved = theme === 'system'
+          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          : theme;
+        document.documentElement.setAttribute('data-theme', resolved);
+        document.documentElement.setAttribute('data-accent', accent);
+      } catch (e) { /* First visit or storage unavailable. */ }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="sidebar-top">
+        <a class="brand" href="#today" data-view="today" aria-label="Morrow home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none"><path d="M8 26V14.5c0-1.6 1.9-2.4 3-1.2L18 21l7-7.7c1.1-1.2 3-.4 3 1.2V26" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28.5" cy="9.5" r="2.3" fill="var(--accent)"/></svg>
+          </span>
+          <span class="brand-word">morrow<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="side-nav">
+          <p class="nav-label">Your space</p>
+          <button class="nav-item is-active" data-view="today" data-icon-wrap>
+            <span class="nav-icon" data-icon="home"></span><span>Today</span>
+            <span class="nav-badge" id="todayNavBadge" hidden></span>
+          </button>
+          <button class="nav-item" data-view="habits">
+            <span class="nav-icon" data-icon="repeat"></span><span>Habits</span>
+          </button>
+          <button class="nav-item" data-view="focus">
+            <span class="nav-icon" data-icon="timer"></span><span>Focus</span>
+            <span class="nav-live" id="focusNavLive" hidden></span>
+          </button>
+          <button class="nav-item" data-view="planner">
+            <span class="nav-icon" data-icon="check-square"></span><span>Planner</span>
+          </button>
+          <button class="nav-item" data-view="insights">
+            <span class="nav-icon" data-icon="chart"></span><span>Insights</span>
+          </button>
+
+          <p class="nav-label nav-label-spaced">Personal</p>
+          <button class="nav-item" data-view="settings">
+            <span class="nav-icon" data-icon="settings"></span><span>Settings</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div id="sidebarStreak"></div>
+        <button class="profile-chip" data-view="settings">
+          <span class="avatar avatar-sm" id="sidebarAvatar">M</span>
+          <span class="profile-chip-copy">
+            <strong id="sidebarName">Friend</strong>
+            <span id="sidebarRole">Your personal space</span>
+          </span>
+          <span class="profile-chip-arrow" data-icon="chevron-right"></span>
+          <span class="sr-only"> — open profile settings</span>
+        </button>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-context">
+          <a class="brand brand-mobile" href="#today" data-view="today" aria-label="Morrow home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36" fill="none"><path d="M8 26V14.5c0-1.6 1.9-2.4 3-1.2L18 21l7-7.7c1.1-1.2 3-.4 3 1.2V26" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28.5" cy="9.5" r="2.3" fill="var(--accent)"/></svg>
+            </span>
+            <span class="brand-word">morrow<span class="brand-dot">.</span></span>
+          </a>
+          <span class="topbar-date" id="topbarDate"></span>
+          <span class="offline-pill" id="offlinePill" hidden><span class="offline-dot"></span>Offline</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="command-trigger" data-action="command">
+            <span data-icon="search"></span>
+            <span class="command-trigger-label">Jump to...</span>
+            <kbd>Ctrl K</kbd>
+          </button>
+          <button class="icon-btn theme-btn" data-action="toggle-theme" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <span data-icon="sun"></span>
+          </button>
+          <button class="btn btn-dark btn-compact new-btn" data-action="quick-add">
+            <span data-icon="plus"></span><span class="new-btn-label">New</span>
+          </button>
+          <button class="avatar avatar-top" id="topAvatar" data-view="settings">
+            <span id="topAvatarText">M</span>
+            <span class="sr-only"> — open profile settings</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content" id="mainContent" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button class="mobile-nav-item is-active" data-view="today">
+      <span data-icon="home"></span><span>Today</span>
+    </button>
+    <button class="mobile-nav-item" data-view="habits">
+      <span data-icon="repeat"></span><span>Habits</span>
+    </button>
+    <button class="mobile-nav-item mobile-nav-focus" data-view="focus" aria-label="Focus timer">
+      <span class="mobile-focus-orb"><span data-icon="timer"></span></span>
+      <span>Focus</span>
+    </button>
+    <button class="mobile-nav-item" data-view="planner">
+      <span data-icon="check-square"></span><span>Plan</span>
+    </button>
+    <button class="mobile-nav-item" data-view="insights">
+      <span data-icon="chart"></span><span>Insights</span>
+    </button>
+  </nav>
+
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <div class="modal-panel" id="modalPanel"></div>
+  </dialog>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="false"></div>
+  <canvas class="confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
+  <div id="onboardingRoot"></div>
+
+  <script src="core.js" defer></script>
+  <script src="views.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop all products · Tundara</title>
+  <meta name="description" content="Browse every Tundara department in one place. Filter by category, brand, price, rating and delivery to find exactly what you need.">
+  <meta name="theme-color" content="#0b7a5a">
+  <meta property="og:title" content="Shop all products · Tundara">
+  <meta property="og:description" content="179 curated products across 9 departments, with filters that actually help.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="shop">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="breadcrumb" id="shopCrumb" aria-label="Breadcrumb"></nav>
+      <section class="shop-hero" id="shopHero" aria-label="Shop overview"></section>
+
+      <div class="shop-layout" id="shopTop">
+        <aside class="shop-sidebar" id="shopSidebar" aria-label="Product filters"></aside>
+
+        <div class="shop-main">
+          <div class="shop-toolbar">
+            <span class="results-count" id="resultsCount">Loading products…</span>
+            <div class="toolbar-right">
+              <button class="btn btn-outline btn-sm filter-open-btn" id="filterOpen" type="button">
+                <span data-icon="sliders"></span> Filters <span id="filterCountMobile"></span>
+              </button>
+              <label class="sort-wrap">
+                <span>Sort by</span>
+                <select class="select" id="sortSelect" aria-label="Sort products">
+                  <option value="popular">Most popular</option>
+                  <option value="newest">Newest first</option>
+                  <option value="price-asc">Price: low to high</option>
+                  <option value="price-desc">Price: high to low</option>
+                  <option value="rating">Top rated</option>
+                  <option value="discount">Biggest discount</option>
+                </select>
+              </label>
+              <label class="shop-per-page">
+                <span>Show</span>
+                <select class="select" id="perPageSelect" aria-label="Products per page">
+                  <option value="12">12</option>
+                  <option value="24" selected>24</option>
+                  <option value="36">36</option>
+                  <option value="48">48</option>
+                </select>
+              </label>
+              <div class="view-toggle" id="viewToggle" role="group" aria-label="View style">
+                <button type="button" data-view="grid" aria-label="Grid view" data-icon="grid"></button>
+                <button type="button" data-view="list" aria-label="List view" data-icon="list"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="active-filters" id="activeFilters"></div>
+          <div id="shopResults" aria-live="polite"></div>
+          <div class="shop-footer-bar">
+            <span class="results-count" id="shopFooterCount"></span>
+            <span class="text-muted" style="font-size:.72rem;display:inline-flex;align-items:center;gap:6px"><span data-icon="shield"></span> Every order covered by Tundara Guarantee</span>
+          </div>
+          <nav class="pagination" id="shopPagination" aria-label="Pagination"></nav>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="recommend-title">
+        <div class="section-head">
+          <div>
+            <h2 id="recommend-title">You might also love</h2>
+            <p>Hand-picked favourites from across the marketplace.</p>
+          </div>
+          <a class="section-link" href="shop.html?sort=rating">Top rated <span data-icon="arrow-right"></span></a>
+        </div>
+        <div class="product-grid" id="shopRecommend"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/shop.js"></script>
+</body>
+</html>

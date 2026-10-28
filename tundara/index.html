@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tundara — Everything you love. Delivered.</title>
+  <meta name="description" content="Shop 179+ curated products across tech, phones, home, fashion, beauty and more. Genuine sellers, free delivery over $35 and 7-day easy returns.">
+  <meta name="theme-color" content="#0b7a5a">
+  <meta property="og:title" content="Tundara — Everything you love. Delivered.">
+  <meta property="og:description" content="A happier way to shop: curated products, honest prices and delivery you can count on.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" class="page-main">
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid" id="heroGrid"></div>
+        <div class="benefits" id="benefitsRail"></div>
+      </div>
+    </section>
+
+    <section class="section-tight" aria-label="Shop by department">
+      <div class="container">
+        <nav class="cat-rail" id="catRail"></nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="flash-section reveal">
+          <div class="section-head">
+            <div>
+              <h2><span class="flash-icon" data-icon="zap"></span> Flash deals</h2>
+              <p>Today only · <b id="flashSold">0</b> items snapped up already. When they're gone, they're gone.</p>
+            </div>
+            <div class="flash-meta">
+              <span class="ends">Ends in</span>
+              <span id="flashCountdown"></span>
+              <a class="section-link" href="shop.html?deals=1">See all deals <span data-icon="arrow-right"></span></a>
+            </div>
+          </div>
+          <div class="rail-wrap">
+            <button class="rail-arrow rail-prev" type="button" aria-label="Previous deals" data-icon="chevron-left"></button>
+            <div class="rail" id="flashRail"></div>
+            <button class="rail-arrow rail-next" type="button" aria-label="More deals" data-icon="chevron-right"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trending">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Trending right now</h2>
+            <p>The products everyone is adding to their baskets this week.</p>
+          </div>
+          <div class="pill-tabs" id="trendingTabs" role="group" aria-label="Trending categories"></div>
+        </div>
+        <div class="rail-wrap">
+          <button class="rail-arrow rail-prev" type="button" aria-label="Previous products" data-icon="chevron-left"></button>
+          <div class="rail" id="trendingRail"></div>
+          <button class="rail-arrow rail-next" type="button" aria-label="More products" data-icon="chevron-right"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="bestsellers-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="bestsellers-title">Bestsellers worth the hype</h2>
+            <p>Top-rated favourites, backed by thousands of verified reviews.</p>
+          </div>
+          <a class="section-link" href="shop.html?sort=popular">Shop bestsellers <span data-icon="arrow-right"></span></a>
+        </div>
+        <div class="rail-wrap">
+          <button class="rail-arrow rail-prev" type="button" aria-label="Previous bestsellers" data-icon="chevron-left"></button>
+          <div class="rail" id="bestRail"></div>
+          <button class="rail-arrow rail-next" type="button" aria-label="More bestsellers" data-icon="chevron-right"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="edit-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="edit-title">Shop by mood, room &amp; moment</h2>
+            <p>Curated edits to help you find the good stuff faster.</p>
+          </div>
+          <a class="section-link" href="shop.html">All departments <span data-icon="arrow-right"></span></a>
+        </div>
+        <div class="category-cards" id="categoryCards"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="new-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="new-title">Just landed</h2>
+            <p>Fresh finds added this week — be the first to get them.</p>
+          </div>
+          <a class="section-link" href="shop.html?sort=newest">Shop new arrivals <span data-icon="arrow-right"></span></a>
+        </div>
+        <div class="product-grid" id="newGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="recentSection" hidden aria-labelledby="recent-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="recent-title">Pick up where you left off</h2>
+            <p>Recently viewed products, saved just for you.</p>
+          </div>
+        </div>
+        <div class="rail-wrap">
+          <button class="rail-arrow rail-prev" type="button" aria-label="Previous recently viewed" data-icon="chevron-left"></button>
+          <div class="rail" id="recentRail"></div>
+          <button class="rail-arrow rail-next" type="button" aria-label="More recently viewed" data-icon="chevron-right"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight" aria-label="Featured brands">
+      <div class="container">
+        <div class="brand-strip reveal" id="brandStrip"></div>
+      </div>
+    </section>
+
+    <section class="trust-section reveal" id="trust" aria-labelledby="trust-title">
+      <div class="container" style="padding-block:44px">
+        <div class="trust-inner">
+          <div class="trust-copy">
+            <span class="eyebrow"><span data-icon="heart"></span> The Tundara difference</span>
+            <h2 id="trust-title">Shopping that feels good, from cart to doorstep.</h2>
+            <p>We obsess over the details — genuine products, honest pricing, careful packaging and support that actually helps. That's why millions of shoppers keep coming back.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:18px">
+              <a class="btn btn-primary" href="shop.html">Start shopping <span data-icon="arrow-right"></span></a>
+              <a class="btn btn-outline" href="help.html#about">Our story</a>
+            </div>
+          </div>
+          <div class="trust-stats" id="trustStats"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="reviews-title">Loved by real shoppers</h2>
+            <p>Verified reviews from customers across Africa.</p>
+          </div>
+          <a class="section-link" href="help.html#contact">Talk to us <span data-icon="chat"></span></a>
+        </div>
+        <div class="testimonial-grid" id="testimonialGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <noscript>
+    <div class="container" style="padding:24px 0">
+      <div class="panel panel-body">Tundara needs JavaScript enabled to load products, your basket and checkout. Please enable JavaScript and refresh the page.</div>
+    </div>
+  </noscript>
+
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

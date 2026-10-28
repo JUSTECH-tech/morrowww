@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Tundara</title>
+  <meta name="description" content="That page has moved or doesn't exist. Search Tundara, browse popular categories or head back to the homepage.">
+  <meta name="theme-color" content="#0b7a5a">
+  <base href="/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="404">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Page not found</span>
+      </nav>
+
+      <section class="notfound" aria-labelledby="nfTitle">
+        <div class="code" aria-hidden="true"></div>
+        <span class="eyebrow">Lost in the aisles</span>
+        <h1 id="nfTitle">This page took a wrong turn</h1>
+        <p id="nfCopy">The page you're looking for may have moved, sold out or never existed. Let's get you back to something good.</p>
+        <p class="nf-path-wrap" id="nfPathWrap" hidden>Requested: <code id="nfPath"></code></p>
+
+        <form class="nf-form" id="nfForm" role="search" autocomplete="off">
+          <div class="input-group">
+            <span data-icon="search"></span>
+            <input class="input" id="nfInput" name="q" placeholder="Search products, brands or categories" aria-label="Search Tundara">
+          </div>
+          <button class="btn btn-primary" type="submit"><span data-icon="search"></span> Search</button>
+        </form>
+
+        <div class="notfound-actions" style="margin-top:14px">
+          <a class="btn btn-primary" href="index.html"><span data-icon="home"></span> Back to homepage</a>
+          <a class="btn btn-outline" href="shop.html"><span data-icon="grid"></span> Browse all products</a>
+          <a class="btn btn-ghost" href="help.html"><span data-icon="help"></span> Get help</a>
+        </div>
+
+        <div class="nf-block">
+          <h2>Shop a category</h2>
+          <div class="notfound-suggestions" id="nfSuggestions"></div>
+        </div>
+
+        <div class="nf-block">
+          <h2>People are searching for</h2>
+          <div class="notfound-suggestions" id="nfSearches"></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="nfPopular">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow"><span data-icon="flame"></span> Trending</span>
+            <h2 id="nfPopular">Popular right now</h2>
+          </div>
+          <a class="link-arrow" href="shop.html?sort=popular">See all <span data-icon="arrow-right"></span></a>
+        </div>
+        <div class="product-grid" id="nfProducts"></div>
+      </section>
+
+      <div class="help-footer-note" style="margin:0 0 40px">
+        <span data-icon="truck"></span>
+        <div>
+          <strong>Looking for an order?</strong>
+          <p>Track any Tundara parcel in seconds — no login needed.</p>
+        </div>
+        <a class="btn btn-soft btn-sm" href="track.html"><span data-icon="package"></span> Track order</a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/404.js"></script>
+</body>
+</html>

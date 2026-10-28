@@ -1,0 +1,50 @@
+{
+  "id": "/",
+  "name": "Tundara — Everything you love. Delivered.",
+  "short_name": "Tundara",
+  "description": "Shop tech, fashion, home, beauty, groceries and more with fast delivery, fair prices and Tundara Guarantee.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0b7a5a",
+  "categories": ["shopping", "lifestyle", "business"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "assets/img/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop deals",
+      "short_name": "Deals",
+      "description": "Browse today's flash deals",
+      "url": "./shop.html?deals=1"
+    },
+    {
+      "name": "Track an order",
+      "short_name": "Track",
+      "description": "See where your parcel is",
+      "url": "./track.html"
+    },
+    {
+      "name": "My wishlist",
+      "short_name": "Wishlist",
+      "description": "Products you've saved",
+      "url": "./wishlist.html"
+    }
+  ]
+}

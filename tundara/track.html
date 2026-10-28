@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track your order · Tundara</title>
+  <meta name="description" content="Track any Tundara order in seconds. Enter your order number to see live delivery status, courier updates and estimated arrival.">
+  <meta name="theme-color" content="#0b7a5a">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="track">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" class="page-main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Track order</span>
+      </nav>
+      <div class="page-head">
+        <div>
+          <h1>Where's my order?</h1>
+          <p>Enter your order number and we'll show you exactly where your parcel is — no account needed.</p>
+        </div>
+        <div class="page-head-actions">
+          <a class="btn btn-outline btn-sm" href="account.html#orders"><span data-icon="user"></span> My orders</a>
+        </div>
+      </div>
+
+      <div class="track-wrap">
+        <div class="track-card">
+          <form class="track-form" id="trackForm" novalidate>
+            <div class="input-group">
+              <span data-icon="package"></span>
+              <input class="input" id="trackInput" name="order" placeholder="Order number, e.g. TD-DEMO-4821" autocomplete="off" aria-label="Order number" aria-describedby="trackError">
+            </div>
+            <button class="btn btn-primary" type="submit"><span data-icon="search"></span> Track order</button>
+          </form>
+          <p class="field-error" id="trackError" role="alert" aria-live="polite" style="display:none;margin-top:9px"></p>
+          <p class="track-help">You'll find your order number in the confirmation email we sent. It always starts with <b>TD-</b>. Still stuck? <a class="text-brand" href="help.html#contact">Contact support</a>.</p>
+          <div class="track-demo" id="trackDemo">
+            <strong>Just looking?</strong> Try a demo order:
+            <button type="button" data-demo-order="TD-DEMO-4821">TD-DEMO-4821 <span class="badge badge-official">Shipped</span></button>
+            <button type="button" data-demo-order="TD-DEMO-1977">TD-DEMO-1977 <span class="badge badge-success">Delivered</span></button>
+          </div>
+          <div class="track-result" id="trackResult" aria-live="polite"></div>
+        </div>
+
+        <div class="panel" style="margin-top:14px;padding:18px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <span class="benefit-icon" data-icon="truck"></span>
+          <div style="min-width:200px;flex:1">
+            <strong style="font-size:.84rem">Need a hand with delivery?</strong>
+            <p class="text-muted" style="font-size:.76rem">Our support team is online 24/7 and can chase a courier for you.</p>
+          </div>
+          <a class="btn btn-soft btn-sm" href="help.html#contact">Contact support</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/track.js"></script>
+</body>
+</html>
