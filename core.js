@@ -1,5 +1,5 @@
 /* =========================================================
-   Morrow — core data, helpers and shared utilities
+   Oloyede Morrow App — core data, helpers and shared utilities
    ========================================================= */
 
 (function () {
@@ -8,7 +8,7 @@
   const M = (window.M = window.M || {});
 
   M.VERSION = 1;
-  M.STORAGE_KEY = "morrow.v1";
+  M.STORAGE_KEY = "oloyede-morrow.v1";
 
   /* ---------- Icon library ---------- */
 
@@ -189,7 +189,7 @@
   ];
 
   M.QUOTES = [
-    { text: "Small steps, taken consistently, become a life that feels like yours.", author: "Morrow" },
+    { text: "Small steps, taken consistently, become a life that feels like yours.", author: "Oloyede Morrow App" },
     { text: "You do not have to see the whole staircase. Just take the first step.", author: "Martin Luther King Jr." },
     { text: "It is not what we do once in a while that shapes our lives, but what we do consistently.", author: "Tony Robbins" },
     { text: "How we spend our days is, of course, how we spend our lives.", author: "Annie Dillard" },
@@ -200,7 +200,7 @@
     { text: "Fall seven times, stand up eight.", author: "Japanese proverb" },
     { text: "What you do every day matters more than what you do once in a while.", author: "Gretchen Rubin" },
     { text: "The quieter you become, the more you are able to hear.", author: "Ram Dass" },
-    { text: "Almost everything worth doing is better with a little patience.", author: "Morrow" },
+    { text: "Almost everything worth doing is better with a little patience.", author: "Oloyede Morrow App" },
   ];
 
   /* ---------- Date helpers ---------- */
@@ -442,7 +442,7 @@
       const raw = localStorage.getItem(M.STORAGE_KEY);
       if (raw) loaded = JSON.parse(raw);
     } catch (error) {
-      console.warn("Morrow could not read local data.", error);
+      console.warn("Oloyede Morrow App could not read local data.", error);
     }
 
     const base = M.defaultState();
@@ -484,7 +484,7 @@
     try {
       localStorage.setItem(M.STORAGE_KEY, JSON.stringify(M.state));
     } catch (error) {
-      console.warn("Morrow could not save local data.", error);
+      console.warn("Oloyede Morrow App could not save local data.", error);
       if (typeof M.toast === "function") {
         M.toast("Your browser could not save changes. Check available storage.", { icon: "info" });
       }
@@ -1002,7 +1002,7 @@
 
   M.exportPayload = function () {
     return {
-      app: "Morrow",
+      app: "Oloyede Morrow App",
       version: M.VERSION,
       exportedAt: new Date().toISOString(),
       data: M.state,
@@ -1013,7 +1013,7 @@
     if (!payload || typeof payload !== "object") throw new Error("Invalid backup file.");
     const data = payload.data && payload.data.habits ? payload.data : payload;
     if (!data || !Array.isArray(data.habits) || !Array.isArray(data.tasks)) {
-      throw new Error("This file does not look like a Morrow backup.");
+      throw new Error("This file does not look like an Oloyede Morrow App backup.");
     }
     const base = M.defaultState();
     const next = Object.assign({}, base, data);

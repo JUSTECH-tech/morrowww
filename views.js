@@ -1,5 +1,5 @@
 /* =========================================================
-   Morrow — view renderers
+   Oloyede Morrow App — view renderers
    All views are plain HTML strings rendered into #mainContent.
    ========================================================= */
 
@@ -1556,7 +1556,7 @@
       '<section class="page-view" data-page="settings">' +
       pageIntro(
         "Your space, your rules",
-        "Make Morrow <span class=\"title-accent\">yours.</span>",
+        "Make Oloyede Morrow App <span class=\"title-accent\">yours.</span>",
         "Everything lives on this device. No account, no feed, no one else deciding what matters today.",
         ""
       ) +
@@ -1566,7 +1566,7 @@
       '<section class="card settings-card">' +
       '<div class="settings-section-head"><span class="settings-section-icon">' +
       icon("user", 17) +
-      '</span><div class="settings-section-copy"><h2>Profile</h2><p>How Morrow greets you and shapes your day.</p></div></div>' +
+      '</span><div class="settings-section-copy"><h2>Profile</h2><p>How Oloyede Morrow App greets you and shapes your day.</p></div></div>' +
       '<div class="avatar-settings-row"><span class="avatar avatar-lg" id="settingsAvatar">' +
       esc(M.initials(profile.name)) +
       '</span><div class="avatar-settings-copy"><strong>' +
@@ -1645,7 +1645,7 @@
       "</div></div>" +
       '<div class="settings-inline-note" style="margin-top:17px">' +
       icon("info", 13) +
-      "<span>Morrow follows your system theme by default and remembers your choice on this device.</span></div>" +
+      "<span>Oloyede Morrow App follows your system theme by default and remembers your choice on this device.</span></div>" +
       "</section>" +
 
       '<section class="card settings-card">' +
@@ -1660,7 +1660,7 @@
       "</button>" +
       '<button class="data-action" type="button" data-action="import-data"><span class="data-action-icon">' +
       icon("upload", 14) +
-      '</span><span class="data-action-copy"><strong>Import a backup</strong><span>Restore a previous Morrow export</span></span>' +
+      '</span><span class="data-action-copy"><strong>Import a backup</strong><span>Restore a previous Oloyede Morrow App backup</span></span>' +
       icon("chevron-right", 13) +
       "</button>" +
       '<button class="data-action danger" type="button" data-action="reset-app"><span class="data-action-icon">' +
@@ -1682,7 +1682,7 @@
       '<section class="install-card">' +
       '<span class="install-card-icon">' +
       icon("smartphone", 18) +
-      '</span><div class="install-card-copy"><strong>Keep Morrow close</strong><span>Install it as an app for a calmer, offline space.</span></div>' +
+      '</span><div class="install-card-copy"><strong>Keep Oloyede Morrow App close</strong><span>Install it as an app for a calmer, offline space.</span></div>' +
       '<button class="btn btn-light btn-sm" type="button" data-action="install-app">Install</button>' +
       "</section>" +
 
@@ -1704,14 +1704,14 @@
       '<div class="settings-section-head" style="margin-bottom:12px"><span class="settings-section-icon">' +
       icon("shield", 17) +
       '</span><div class="settings-section-copy"><h2>Private by design</h2><p>No analytics, no account, no cloud.</p></div></div>' +
-      '<p class="card-sub" style="line-height:1.7">Morrow stores everything in your browser using local storage. Clearing your browser data or using another device means starting fresh — so keep an occasional export somewhere safe.</p>' +
+      '<p class="card-sub" style="line-height:1.7">Oloyede Morrow App stores everything in your browser using local storage. Clearing your browser data or using another device means starting fresh — so keep an occasional export somewhere safe.</p>' +
       '<div class="settings-inline-note" style="margin-top:14px">' +
       icon("wifi-off", 13) +
       "<span>Works offline once installed. Your data never leaves this device unless you export it.</span></div>" +
       "</section>" +
 
       '<section class="card settings-card">' +
-      '<div class="flex-between"><div><p class="eyebrow">Morrow</p><p class="card-sub" style="margin-top:4px">Habits, focus & progress.</p></div><span class="badge accent">v1.0</span></div>' +
+      '<div class="flex-between"><div><p class="eyebrow">Oloyede Morrow App</p><p class="card-sub" style="margin-top:4px">Habits, focus & progress.</p></div><span class="badge accent">v1.0</span></div>' +
       '<div class="settings-footer"><span>Made for ordinary days.</span><strong>Yours, locally.</strong></div>' +
       "</section>" +
 
@@ -1740,7 +1740,7 @@
       { id: "log-session", group: "Create", label: "Log a focus session", hint: "Record focus done offline", icon: "clock", action: "log-session" },
       { id: "toggle-theme", group: "Settings", label: "Toggle theme", hint: "Light, dark or system", icon: "sun", action: "toggle-theme", keys: "D" },
       { id: "export-data", group: "Settings", label: "Export a backup", hint: "Download your data as JSON", icon: "download", action: "export-data" },
-      { id: "import-data", group: "Settings", label: "Import a backup", hint: "Restore a Morrow export", icon: "upload", action: "import-data" },
+      { id: "import-data", group: "Settings", label: "Import a backup", hint: "Restore an Oloyede Morrow App backup", icon: "upload", action: "import-data" },
     ];
   };
 
@@ -1764,7 +1764,7 @@
       '<div class="command-panel">' +
       '<div class="command-search">' +
       icon("search", 17) +
-      '<input type="text" id="commandInput" data-command-input placeholder="Search Morrow..." autocomplete="off" aria-label="Search commands">' +
+      '<input type="text" id="commandInput" data-command-input placeholder="Search Oloyede Morrow App..." autocomplete="off" aria-label="Search commands">' +
       '<kbd>Esc</kbd>' +
       "</div>" +
       '<div class="command-list" id="commandList">' +
@@ -1799,7 +1799,7 @@
       "</div>" +
       '<div class="command-footer"><span>' +
       icon("command", 9) +
-      "Use arrows and Enter</span><span>Morrow · local-first</span></div>" +
+      "Use arrows and Enter</span><span>Oloyede Morrow App · local-first</span></div>" +
       "</div>"
     );
   };
@@ -2112,14 +2112,14 @@
     ];
     return (
       '<section class="onboarding-art">' +
-      '<div class="onboarding-brand"><a class="brand" href="#today" aria-label="Morrow">' +
+      '<div class="onboarding-brand"><a class="brand" href="#today" aria-label="Oloyede Morrow App">' +
       '<span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M8 26V14.5c0-1.6 1.9-2.4 3-1.2L18 21l7-7.7c1.1-1.2 3-.4 3 1.2V26" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28.5" cy="9.5" r="2.3" fill="var(--accent)"/></svg></span>' +
-      '<span class="brand-word">morrow<span class="brand-dot">.</span></span></a>' +
+      '<span class="brand-word">oloyede morrow<span class="brand-dot">.</span></span></a>' +
       '<span class="onboarding-brand-tag">Local-first · private</span></div>' +
       '<div class="onboarding-art-main">' +
       '<div class="onboarding-art-copy"><p class="eyebrow">Habits, focus & progress</p>' +
       "<h1>A softer way to <em>become</em> who you're becoming.</h1>" +
-      "<p>Morrow is a quiet home for your habits, study sessions and the small promises that add up to a life. No streak guilt. No noisy feed.</p></div>" +
+      "<p>Oloyede Morrow App is a quiet home for your habits, study sessions and the small promises that add up to a life. No streak guilt. No noisy feed.</p></div>" +
       '<div class="onboarding-preview"><div class="preview-top"><span class="preview-title">Today <span>· a good day</span></span><span class="preview-date">' +
       esc(M.formatDate(today(), "short")) +
       '</span></div><div class="preview-body"><div class="preview-habits">' +
@@ -2194,7 +2194,7 @@
       content =
         '<div class="onboarding-step"><span class="onboarding-step-kicker">Let\'s begin</span>' +
         "<h2>First, what should we call you?</h2>" +
-        "<p>Morrow is yours alone. A name makes it feel a little more like home.</p>" +
+        "<p>Oloyede Morrow App is yours alone. A name makes it feel a little more like home.</p>" +
         '<div class="onboarding-fields"><div class="onboarding-name-row"><span class="onboarding-avatar-preview" data-onboarding-avatar>' +
         esc(M.initials(draft.name || "M")) +
         '</span><input class="input" type="text" maxlength="40" value="' +
@@ -2217,7 +2217,7 @@
       content =
         '<div class="onboarding-step"><span class="onboarding-step-kicker">Set the tone</span>' +
         "<h2>How much focus feels right?</h2>" +
-        "<p>A daily target you can reach on a normal day. Morrow will keep it visible, not turn it into a scoreboard.</p>" +
+        "<p>A daily target you can reach on a normal day. Oloyede Morrow App will keep it visible, not turn it into a scoreboard.</p>" +
         '<div class="onboarding-fields"><div><div class="onboarding-goal"><span class="onboarding-goal-value" data-onboarding-goal-value>' +
         draft.focusGoal +
         ' <span>min / day</span></span><span class="onboarding-goal-caption" data-onboarding-goal-caption>' +
@@ -2257,7 +2257,7 @@
           "Back</button>"
         : '<span></span>') +
       '<button class="btn btn-dark" type="button" data-action="onboarding-next">' +
-      (step === 2 ? "Enter Morrow" : "Continue") +
+      (step === 2 ? "Enter Oloyede Morrow App" : "Continue") +
       icon("arrow-right", 15) +
       "</button></div>" +
       '<p class="onboarding-note">No account needed. Your data stays in this browser.</p>' +

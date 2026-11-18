@@ -1,10 +1,10 @@
 /* =========================================================
-   Morrow — offline service worker
+   Oloyede Morrow App — offline service worker
    Precaches the app shell; keeps navigation and assets fresh
    without ever trapping the user on a stale build.
    ========================================================= */
 
-const CACHE_VERSION = "morrow-v10";
+const CACHE_VERSION = "oloyede-morrow-v1";
 const APP_SHELL = [
   "./",
   "./index.html",

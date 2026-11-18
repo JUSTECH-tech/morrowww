@@ -1,5 +1,5 @@
 /* =========================================================
-   Morrow — interactions
+   Oloyede Morrow App — interactions
    ========================================================= */
 
 (function () {
@@ -330,7 +330,7 @@
     }
 
     updateThemeButton();
-    document.title = (TITLES[M.ui.view] || "Morrow") + " · Morrow";
+    document.title = (TITLES[M.ui.view] || "Oloyede Morrow App") + " · Oloyede Morrow App";
   }
 
   function hydrateShellIcons() {
@@ -415,7 +415,7 @@
     }
     renderApp(false);
     confetti(75);
-    M.toast("Welcome to Morrow, " + M.firstName(M.state.profile.name) + ".", { icon: "sparkles" });
+    M.toast("Welcome to Oloyede Morrow App, " + M.firstName(M.state.profile.name) + ".", { icon: "sparkles" });
   }
 
   /* ---------- Timer ---------- */
@@ -769,7 +769,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "morrow-backup-" + M.todayISO() + ".json";
+    link.download = "oloyede-morrow-backup-" + M.todayISO() + ".json";
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -787,7 +787,7 @@
       try {
         payload = JSON.parse(String(reader.result || "{}"));
       } catch (error) {
-        M.toast("That file could not be read as a Morrow backup.", { icon: "info" });
+        M.toast("That file could not be read as an Oloyede Morrow App backup.", { icon: "info" });
         return;
       }
       const habitCount = payload && payload.data && Array.isArray(payload.data.habits) ? payload.data.habits.length : 0;
@@ -796,7 +796,7 @@
         message:
           "This backup contains " +
           habitCount +
-          " habits. Importing will replace everything currently in Morrow on this device.",
+          " habits. Importing will replace everything currently in Oloyede Morrow App on this device.",
         confirmLabel: "Import backup",
         cancelLabel: "Keep current data",
         icon: "upload",
@@ -818,7 +818,7 @@
             renderApp(false);
             M.toast("Backup restored. Welcome back.", { icon: "check-circle" });
           } catch (error) {
-            M.toast(error.message || "This file does not look like a Morrow backup.", { icon: "info" });
+            M.toast(error.message || "This file does not look like an Oloyede Morrow App backup.", { icon: "info" });
           }
         },
       });
@@ -1550,7 +1550,7 @@
     });
     window.addEventListener("offline", function () {
       sync();
-      M.toast("You're offline. Morrow still works.", { icon: "wifi-off" });
+      M.toast("You're offline. Oloyede Morrow App still works.", { icon: "wifi-off" });
     });
     sync();
   }
@@ -1562,7 +1562,7 @@
     });
     window.addEventListener("appinstalled", function () {
       deferredPrompt = null;
-      M.toast("Morrow installed. It is yours now.", { icon: "smartphone" });
+      M.toast("Oloyede Morrow App installed. It is yours now.", { icon: "smartphone" });
     });
   }
 
@@ -1570,7 +1570,7 @@
     if (!("serviceWorker" in navigator)) return;
     if (location.protocol !== "http:" && location.protocol !== "https:") return;
     navigator.serviceWorker.register("sw.js").catch(function (error) {
-      console.warn("Morrow service worker could not register.", error);
+      console.warn("Oloyede Morrow App service worker could not register.", error);
     });
   }
 
