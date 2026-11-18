@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Oloyede Morrow App — Habits, focus & progress</title>
-  <meta name="description" content="Oloyede Morrow App is a calm, local-first habit and focus tracker for anyone building a better rhythm.">
+  <title>Morrow — Habits, focus & progress</title>
+  <meta name="description" content="Morrow is a calm, local-first habit and focus tracker for anyone building a better rhythm.">
   <meta name="theme-color" content="#f4f1e9">
   <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="manifest.json">
@@ -23,7 +23,7 @@
     // Apply the saved appearance before paint to avoid a flash of the wrong theme.
     (function () {
       try {
-        var raw = localStorage.getItem('oloyede-morrow.v1');
+        var raw = localStorage.getItem('morrow.v1');
         var saved = raw ? JSON.parse(raw) : null;
         var profile = saved && saved.profile ? saved.profile : {};
         var theme = profile.theme || 'system';
@@ -43,11 +43,11 @@
   <div class="app-shell" id="appShell">
     <aside class="sidebar" aria-label="Primary navigation">
       <div class="sidebar-top">
-        <a class="brand" href="#today" data-view="today" aria-label="Oloyede Morrow App home">
+        <a class="brand" href="#today" data-view="today" aria-label="Morrow home">
           <span class="brand-mark" aria-hidden="true">
             <svg viewBox="0 0 36 36" fill="none"><path d="M8 26V14.5c0-1.6 1.9-2.4 3-1.2L18 21l7-7.7c1.1-1.2 3-.4 3 1.2V26" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28.5" cy="9.5" r="2.3" fill="var(--accent)"/></svg>
           </span>
-          <span class="brand-word">oloyede morrow<span class="brand-dot">.</span></span>
+          <span class="brand-word">morrow<span class="brand-dot">.</span></span>
         </a>
 
         <nav class="side-nav">
@@ -94,11 +94,11 @@
     <div class="main-shell">
       <header class="topbar">
         <div class="topbar-context">
-          <a class="brand brand-mobile" href="#today" data-view="today" aria-label="Oloyede Morrow App home">
+          <a class="brand brand-mobile" href="#today" data-view="today" aria-label="Morrow home">
             <span class="brand-mark" aria-hidden="true">
               <svg viewBox="0 0 36 36" fill="none"><path d="M8 26V14.5c0-1.6 1.9-2.4 3-1.2L18 21l7-7.7c1.1-1.2 3-.4 3 1.2V26" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28.5" cy="9.5" r="2.3" fill="var(--accent)"/></svg>
             </span>
-            <span class="brand-word">oloyede morrow<span class="brand-dot">.</span></span>
+            <span class="brand-word">morrow<span class="brand-dot">.</span></span>
           </a>
           <span class="topbar-date" id="topbarDate"></span>
           <span class="offline-pill" id="offlinePill" hidden><span class="offline-dot"></span>Offline</span>

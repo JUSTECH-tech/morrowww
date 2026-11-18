@@ -1,7 +1,7 @@
 {
-  "name": "Oloyede Morrow App — Habits, focus & progress",
-  "short_name": "Oloyede Morrow",
-  "description": "Oloyede Morrow App is a calm, local-first habit and focus tracker for anyone building a better rhythm.",
+  "name": "Morrow — Habits, focus & progress",
+  "short_name": "Morrow",
+  "description": "Morrow is a calm, local-first habit and focus tracker for anyone building a better rhythm.",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",
